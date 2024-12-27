@@ -25,6 +25,8 @@ test('visit ecole d ingenieurs', async ({ page }) => {
 
   // Given That I'm at Ecole Polytechnique website
   await page.goto('https://www.polytechnique.edu/'); // Replace with the accurate URL
+  
+  await page.screenshot({ path: 'screenshot.png', fullPage: true });
 
   // Then Visit CentraleSupelec website
   await page.goto('https://www.centralesupelec.fr/'); // Replace with the accurate URL
@@ -34,6 +36,9 @@ test('visit ecole d ingenieurs', async ({ page }) => {
 
   // Then Visit INSA Lyon website
   await page.goto('https://www.insa-lyon.fr/'); // Replace with the accurate URL
+
+  
+  await page.goto('https://www.ensta-paris.fr/'); // Replace with the accurate URL
 
   // Then Close Browser
   await page.close();
